@@ -68,14 +68,13 @@ $('.button-edit').on('click', function(){
 })
 
 // This part is for recording data
-
 var issueEntries = ["no issues","broken curb ramp", "needs curb ramp", "1st gen curb ramp", "2nd gen curb ramp", "3rd gen curb ramp"]
 
 //button issue entry counters
-swi = 0
-nwi = 0
-nei = 0
-sei = 0
+var swi = 0
+var nwi = 0
+var nei = 0
+var sei = 0
 
 //cycling function for buttons
 $('.button-southwest').on('click', function(){
