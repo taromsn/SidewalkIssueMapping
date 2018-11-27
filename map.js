@@ -54,15 +54,19 @@ map.addControl(new mapboxgl.GeolocateControl({
 
 // Clicking the 'EDIT' button will activate the data recording functions
 $('.button-edit').on('click', function(){
-	$('.button-southwest').toggle()
-	$('.button-northwest').toggle()
-	$('.button-southeast').toggle()
-	$('.button-northeast').toggle()
-	$('.button-done').toggle()
 	swi = 0
 	nwi = 0
 	nei = 0
 	sei = 0
+	$('.button-southwest').toggle()
+	$('.button-southwest').html("SW:")
+	$('.button-northwest').toggle()
+	$('.button-northwest').html("NW:")
+	$('.button-southeast').toggle()
+	$('.button-southeast').html("SE:")
+	$('.button-northeast').toggle()
+	$('.button-northeast').html("NE:")
+	$('.button-done').toggle()
 	feature["geometry"]["coordinates"] = [longitude,latitude]
 	feature["properties"]["intersection"] = [intersection]
 })
