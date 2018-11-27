@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>
+		"Taro Matsuno Map 10/25/18"
+	</title>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src='https://unpkg.com/mapbox@1.0.0-beta7/dist/mapbox-sdk.min.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+	<link href='map.css' rel='stylesheet' />
+</head>
+<body>
+	<button id='southeast' class='button-southeast'>SE:</button>
+	<button id='southwest' class='button-southwest'>SW:</button>
+	<button id='northwest' class='button-northwest'>NW:</button>
+	<button id='northeast' class='button-northeast'>NE:</button>
+	<button id='geo-test' class='button-geo-test' onclick="getLocation()">Get Location</button>
+
+	<div id='map'></div>
+	
+	<div class='modal'>
+		<h2 class='modal-title'>About this project</h2>
+		<div class='modal-body'><p>This project is a sample map created as an in-class example for LAR7415.</p></div>
+		<button class='close-button'>&times;</button>
+	</div>
+	<div id='screen'></div>
+
+	<div class='map-overlay' id='legend'></div>
+	<div class='map-overlay' id='info-window'>
+		<h2>Current Intersection</h2>
+		<div id='info-window-body'>
+			<p>No intersection selected</p>
+		</div>
+		<div id='edit-menu'>	
+			<button id = 'edit' class = 'button-edit' style='display:none'>EDIT</button>
+			<button id = 'done' class = 'button-done' style='display:none'>DONE</button>
+		</div>
+	</div>
+
+</body>
+<script src='map.js'></script>
+</html>
