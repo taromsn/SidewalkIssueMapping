@@ -162,7 +162,7 @@ function showPosition(position) {
 
 function getIntersection(latitude,longitude) {
 	console.log(location)
-	var url = 'http://api.geonames.org/findNearestIntersectionJSON?' + 'lat=' + latitude + '&lng=' + longitude + '&username=tlm2yr'
+	var url = 'https://api.geonames.org/findNearestIntersectionJSON?' + 'lat=' + latitude + '&lng=' + longitude + '&username=tlm2yr'
 	console.log(url)
 	var data = {}
 	json = $.getJSON(url, function(data){
