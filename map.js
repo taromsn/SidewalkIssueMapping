@@ -165,6 +165,15 @@ function getIntersection(latitude,longitude) {
 	var url = 'https://secure.geonames.org/findNearestIntersectionJSON?' + 'lat=' + latitude + '&lng=' + longitude + '&username=tlm2yr'
 	console.log(url)
 	var data = {}
+	swi = 0
+	nwi = 0
+	nei = 0
+	sei = 0
+	$('.button-southwest').hide()
+	$('.button-northwest').hide()
+	$('.button-southeast').hide()
+	$('.button-northeast').hide()
+	$('.button-done').hide()
 	json = $.getJSON(url, function(data){
 		console.log(data['intersection']['street1'] + ' & ' + data['intersection']['street2'])
 		intersection = data['intersection']['street1'] + ' & ' + data['intersection']['street2']
